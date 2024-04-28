@@ -6,11 +6,12 @@
 /*   By: nboer <nboer@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:37:25 by nboer             #+#    #+#             */
-/*   Updated: 2024/04/27 15:39:15 by nboer            ###   ########.fr       */
+/*   Updated: 2024/04/28 20:24:17 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int n)
 {

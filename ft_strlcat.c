@@ -1,28 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nboer <nboer@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/27 15:21:24 by nboer             #+#    #+#             */
-/*   Updated: 2024/04/28 20:20:39 by nboer            ###   ########.fr       */
+/*   Created: 2024/04/28 18:33:31 by nboer             #+#    #+#             */
+/*   Updated: 2024/04/28 20:27:06 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-char	ft_toupper(char c)
+size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
-	if (c >= 97 && c <= 122)
-		c -= 32;
-	return (c);
+	size_t	i;
+	size_t	j;	
+
+	i = 0;
+	j = 0;
+	while (dest[i] != '\0')
+		i++;
+	if (size < i)
+		return (size);
+	else if (size > i)
+	{
+		while (src[j] != '\0' && ((i + j) < (size - 1)))
+		{
+			dest[i + j] = src[j];
+			j++;
+		}
+		dest[i + j] = '\0';
+	}
+	return (i + j);
 }
 /*
+#include <stdio.h>
 int main(void)
-{   
-    char test = 'b';
-    char result = ft_toupper(test);
-    printf("%c", result);
+{
+    char src[] = "test";
+    char dest[] = "";
+    int res = ft_strlcat(dest, src, 12);
+    printf("%d", res);
+    return (0);
 }*/

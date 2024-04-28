@@ -6,11 +6,12 @@
 /*   By: nboer <nboer@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:41:49 by nboer             #+#    #+#             */
-/*   Updated: 2024/04/27 15:44:42 by nboer            ###   ########.fr       */
+/*   Updated: 2024/04/28 20:22:13 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 char	*ft_strchr(char *str, char c)
 {

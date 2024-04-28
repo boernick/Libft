@@ -1,51 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nboer <nboer@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/27 16:02:29 by nboer             #+#    #+#             */
-/*   Updated: 2024/04/28 20:21:08 by nboer            ###   ########.fr       */
+/*   Created: 2024/04/28 17:34:49 by nboer             #+#    #+#             */
+/*   Updated: 2024/04/28 20:24:00 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+void	ft_memmove(void *dest, const void *src, size_t n)
 {
-	int	i;
-	int	is_neg;
-	int	num;
+	char		*c_dest;
+	const char	*c_src; 
+	size_t		i;
 
-	i = 0;
-	is_neg = 1;
-	num = 0;
-	while ((nptr[i] == 32) || (nptr[i] >= 9 && nptr[i] <= 13))
-		i++;
-	if (nptr[i] == '-')
+	c_dest = dest;
+	c_src = src;
+	if (c_src < c_dest)
 	{
-		is_neg *= -1;
-		i++;
+		while (n > 0)
+		{
+			c_dest[n - 1] = c_src[n - 1];
+			n--;
+		}
 	}
-	else if (nptr[i] == '+')
-		i++;
-	while ((nptr[i] >= '0') && (nptr[i] <= '9'))
+	else if (c_src > c_dest)
 	{
-		num = 10 * num + nptr[i] - '0';
-		i++;
+		i = 0;
+		while (i < n)
+		{
+			c_dest[i] = c_src[i];
+			i++;
+		}
 	}
-	return (is_neg * num);
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
-	int result = atoi("+45445");
-	int myresult = ft_atoi("+45445");
-	printf("%d\n", result);
-	printf("%d\n", myresult);
-
-	return (0);
-}
-*/
+	char src[] = "Hello World";
+	char dest[20];
+	ft_memmove(dest, src, 3);
+	printf("%s", dest);
+	return(0);
+}*/

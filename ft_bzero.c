@@ -1,32 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nboer <nboer@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/27 15:35:33 by nboer             #+#    #+#             */
-/*   Updated: 2024/04/28 20:19:07 by nboer            ###   ########.fr       */
+/*   Created: 2024/04/28 15:22:10 by nboer             #+#    #+#             */
+/*   Updated: 2024/04/28 20:25:52 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
-#include <libft.h>
+#include <unistd.h>
+#include "libft.h"
 
-unsigned int	ft_strlen(char *str)
+void	ft_bzero(void *str, size_t n)
 {
-	unsigned int	i;
+	unsigned char	*p;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	p = str;
+	while (n > 0)
+	{
+		*p = '\0';
+		p++;
+		n--;
+	}
 }
 /*
-int main(void)
+#include <stdio.h>
+#include <string.h>
+
+int	main(void)
 {
-    char str[] = "sjofjrowjr29-rjw0-23jrl";
-    char result = ft_strlen(str);
-    printf("%d", result); 
-    return (0);
+	char str[] = "test";
+	ft_bzero(str, 3);
+	int i;
+	i = 0;
+	while (str[i] == '\0')
+	{
+		printf("%c", 'y');
+		i++;
+	}
+	return (0);
 }*/
