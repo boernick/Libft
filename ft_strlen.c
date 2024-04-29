@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nboer <nboer@student.42berlin.de>          +#+  +:+       +#+        */
+/*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:35:33 by nboer             #+#    #+#             */
-/*   Updated: 2024/04/28 20:19:07 by nboer            ###   ########.fr       */
+/*   Updated: 2024/04/29 13:22:05 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
-#include <libft.h>
+#include "libft.h"
 
 unsigned int	ft_strlen(char *str)
 {

@@ -3,20 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nboer <nboer@student.42berlin.de>          +#+  +:+       +#+        */
+/*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 17:34:49 by nboer             #+#    #+#             */
-/*   Updated: 2024/04/28 20:24:00 by nboer            ###   ########.fr       */
+/*   Updated: 2024/04/29 16:19:02 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-void	ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char		*c_dest;
-	const char	*c_src; 
+	const char	*c_src;
 	size_t		i;
 
 	c_dest = dest;
@@ -38,6 +37,7 @@ void	ft_memmove(void *dest, const void *src, size_t n)
 			i++;
 		}
 	}
+	return (dest);
 }
 /*
 #include <stdio.h>

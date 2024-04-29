@@ -3,25 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nboer <nboer@student.42berlin.de>          +#+  +:+       +#+        */
+/*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:41:49 by nboer             #+#    #+#             */
-/*   Updated: 2024/04/28 20:22:13 by nboer            ###   ########.fr       */
+/*   Updated: 2024/04/29 15:36:03 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-char	*ft_strchr(char *str, char c)
+char	*ft_strchr(const char *str, char c)
 {
 	while (*str != '\0')
 	{
 		if (*str == c)
-			return (str);
+			return ((char *)str);
 		str++;
 	}
-	return ('\0');
+	if (c == '\0')
+		return ((char *)str);
+	return (NULL);
 }
 /*
 #include <stdio.h>

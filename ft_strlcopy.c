@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcopy.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nboer <nboer@student.42berlin.de>          +#+  +:+       +#+        */
+/*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:37:25 by nboer             #+#    #+#             */
-/*   Updated: 2024/04/28 20:24:17 by nboer            ###   ########.fr       */
+/*   Updated: 2024/04/29 17:50:56 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int n)
@@ -18,12 +17,17 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int n)
 	unsigned int	i;
 
 	i = 0;
-	while (src[i] != '\0' && i < n)
+	if (n > 0)
 	{
-		dest[i] = src[i];
-		i++;
+		while (src[i] && i < (n -1))
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
 	}
-	dest[i] = '\0';
+	while (src[i])
+		i++;
 	return (i);
 }
 /*

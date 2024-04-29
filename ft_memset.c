@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nboer <nboer@student.42berlin.de>          +#+  +:+       +#+        */
+/*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 19:14:53 by nboer             #+#    #+#             */
-/*   Updated: 2024/04/28 20:19:21 by nboer            ###   ########.fr       */
+/*   Updated: 2024/04/29 16:18:40 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-void	ft_memset(void *str, int c, size_t n)
+void	*ft_memset(void *str, int c, size_t n)
 {
 	unsigned char	*p;
 
@@ -24,6 +23,7 @@ void	ft_memset(void *str, int c, size_t n)
 		p++;
 		n--;
 	}
+	return (str);
 }
 /*
 #include <string.h>

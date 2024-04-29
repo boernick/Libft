@@ -3,22 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nboer <nboer@student.42berlin.de>          +#+  +:+       +#+        */
+/*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 14:58:10 by nboer             #+#    #+#             */
-/*   Updated: 2024/04/28 20:19:58 by nboer            ###   ########.fr       */
+/*   Updated: 2024/04/29 15:36:56 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-int	ft_isalnum(char c)
+int	ft_isalnum(const char c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 		return (1);
 	else if (c >= '0' && c <= '9')
 		return (1);
-	else 
+	else
 		return (0);
 }
