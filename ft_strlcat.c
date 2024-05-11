@@ -6,41 +6,63 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:33:31 by nboer             #+#    #+#             */
-/*   Updated: 2024/04/29 13:22:04 by nboer            ###   ########.fr       */
+/*   Updated: 2024/05/11 13:04:41 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+size_t	get_length_dest(char *dest, size_t size)
 {
 	size_t	i;
-	size_t	j;	
 
 	i = 0;
-	j = 0;
 	while (dest[i] != '\0')
 		i++;
-	if (size < i)
+	if (i < size)
+		return (i);
+	else
 		return (size);
-	else if (size > i)
+}
+
+size_t	get_length_src(char *src)
+{
+	size_t	i;
+
+	i = 0;
+	while (src[i] != '\0')
+		i++;
+	return (i);
+}
+
+size_t	ft_strlcat(char *dest, char *src, size_t size)
+{
+	size_t	l_dest;
+	size_t	l_src;
+	size_t	j;
+
+	j = 0;
+	l_dest = get_length_dest(dest, size);
+	l_src = get_length_src(src);
+	if (size > l_dest)
 	{
-		while (src[j] != '\0' && ((i + j) < (size - 1)))
+		while (src[j] != '\0' && ((l_dest + j) < (size - 1)))
 		{
-			dest[i + j] = src[j];
+			dest[l_dest + j] = src[j];
 			j++;
 		}
-		dest[i + j] = '\0';
+		dest[l_dest + j] = '\0';
 	}
-	return (i + j);
+	return (l_dest + l_src);
 }
 /*
-#include <stdio.h>
-int main(void)
+int	 main(void)
 {
-    char src[] = "test";
-    char dest[] = "";
-    int res = ft_strlcat(dest, src, 12);
-    printf("%d", res);
-    return (0);
-}*/
+	#include <stdio.h> 
+	char dest[5] = "test";
+	char src[5] = "";
+	size_t result = ft_strlcat(dest, src, 12);
+	printf("Result: %li\n", result);
+	return (0);
+}
+*/
