@@ -6,13 +6,13 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:21:24 by nboer             #+#    #+#             */
-/*   Updated: 2024/05/11 15:40:25 by nboer            ###   ########.fr       */
+/*   Updated: 2024/05/11 16:44:10 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_toupper(char c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		c -= ('a' - 'A');
