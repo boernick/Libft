@@ -1,42 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcopy.c                                      :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/27 15:37:25 by nboer             #+#    #+#             */
-/*   Updated: 2024/04/29 17:50:56 by nboer            ###   ########.fr       */
+/*   Created: 2024/05/12 13:54:49 by nboer             #+#    #+#             */
+/*   Updated: 2024/05/12 16:51:29 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int	i;
+	char	*p;
 
-	i = 0;
-	if (n > 0)
-	{
-		while (src[i] && i < (n -1))
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
-	}
-	while (src[i])
-		i++;
-	return (i);
+	if (s == NULL)
+		return (NULL);
+	if (ft_strlen(s) < start)
+		len = 0;
+	else if (ft_strlen(s + start) < len)
+		len = ft_strlen(s + start);
+	p = malloc((len + 1) * sizeof(char));
+	if (p == NULL)
+		return (NULL);
+	ft_memcpy(p, s + start, len);
+	p[len] = '\0';
+	return (p);
 }
-/*
-#include <stdio.h>
-int main(void)
-{
-    char str1[] = "testestest";
-    char str2[4];
-    int result = ft_strlcpy(str2, str1, 4);
-    printf("%d", res);
-    return (0);
-}*/

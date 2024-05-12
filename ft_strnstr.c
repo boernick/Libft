@@ -6,22 +6,11 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 18:02:10 by nboer             #+#    #+#             */
-/*   Updated: 2024/05/11 14:39:34 by nboer            ###   ########.fr       */
+/*   Updated: 2024/05/12 19:25:20 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

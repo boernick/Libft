@@ -6,7 +6,7 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:33:31 by nboer             #+#    #+#             */
-/*   Updated: 2024/05/11 13:04:41 by nboer            ###   ########.fr       */
+/*   Updated: 2024/05/12 12:40:01 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ size_t	get_length_dest(char *dest, size_t size)
 		return (size);
 }
 
-size_t	get_length_src(char *src)
+size_t	get_length_src(const char *src)
 {
 	size_t	i;
 
@@ -35,7 +35,7 @@ size_t	get_length_src(char *src)
 	return (i);
 }
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	l_dest;
 	size_t	l_src;

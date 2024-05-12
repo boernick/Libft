@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcopy.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/30 15:27:17 by nboer             #+#    #+#             */
-/*   Updated: 2024/05/12 18:07:04 by nboer            ###   ########.fr       */
+/*   Created: 2024/04/27 15:37:25 by nboer             #+#    #+#             */
+/*   Updated: 2024/05/12 15:35:58 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *str, int c, size_t n)
+unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int n)
 {
-	unsigned char	ch;
-	unsigned char	*p;
+	unsigned int	i;
 
-	ch = (unsigned char) c;
-	p = (unsigned char *)str;
-	while (n > 0)
+	i = 0;
+	if (n > 0)
 	{
-		if (*p == ch)
-			return ((void *)p);
-		p++;
-		n--;
+		while (src[i] && i < (n - 1))
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
 	}
-	return (NULL);
+	while (src[i])
+		i++;
+	return (i);
 }
+/*
+#include <stdio.h>
+int main(void)
+{
+    char str1[] = "testestest";
+    char str2[4];
+    int result = ft_strlcpy(str2, str1, 4);
+    printf("%d", res);
+    return (0);
+}*/
