@@ -6,9 +6,11 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 18:51:04 by nboer             #+#    #+#             */
-/*   Updated: 2024/05/13 18:52:47 by nboer            ###   ########.fr       */
+/*   Updated: 2024/05/18 15:00:03 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
@@ -17,8 +19,8 @@ void	ft_putendl_fd(char *s, int fd)
 	i = 0;
 	while (s[i] != 0)
 	{
-		ft_putchar(s[i], fd);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-	ft_putchar('\n', fd);
+	ft_putchar_fd('\n', fd);
 }
