@@ -6,7 +6,7 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 17:04:02 by nboer             #+#    #+#             */
-/*   Updated: 2024/05/18 17:22:59 by nboer            ###   ########.fr       */
+/*   Updated: 2024/05/20 18:28:17 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putnbr_fd(int n, int fd)
 	num = n;
 	if (num < 0)
 	{
-		ft_putchar('-');
+		ft_putchar_fd('-', fd);
 		num *= -1;
 	}
 	if (num >= 10)
@@ -33,5 +33,5 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(num % 10, fd);
 	}
 	if (num <= 9)
-		ft_putchar_fd(n, fd);
+		ft_putchar_fd(n + '0', fd);
 }

@@ -6,7 +6,7 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 12:50:56 by nboer             #+#    #+#             */
-/*   Updated: 2024/05/12 16:25:30 by nboer            ###   ########.fr       */
+/*   Updated: 2024/05/20 18:36:55 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strdup(const char *str)
 	int		len;
 	int		i;
 
-	if (str == NULL)
-		return (NULL);
 	i = 0;
 	len = ft_strlen(str);
 	p = (char *) malloc((len + 1) * sizeof(char));

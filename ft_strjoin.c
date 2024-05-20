@@ -6,37 +6,45 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 15:16:31 by nboer             #+#    #+#             */
-/*   Updated: 2024/05/12 18:00:54 by nboer            ###   ########.fr       */
+/*   Updated: 2024/05/20 19:02:53 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strcpy_double(char const *s1, char const *s2, char *str)
 {
-	char	*p;
-	int		len1;
-	int		len2;
 	int		j;
 	int		i;
 
-	if (!s1 && !s2)
-		return (NULL);
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
 	j = 0;
 	i = 0;
-	p = malloc((len1 + len2 + 1) * sizeof(char));
 	while (s1[i] != '\0')
 	{
-		p[i] = s1[i];
+		str[i] = s1[i];
 		i++;
 	}
 	while (s2[j] != '\0')
 	{
-		p[i + j] = s2[j];
+		str[i + j] = s2[j];
 		j++;
 	}
-	p[i + j] = '\0';
-	return (p);
+	str[i + j] = '\0';
+	return (str);
+}
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	char	*str;
+	char	*str_new;
+	int		len1;
+	int		len2;
+
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	str = malloc((len1 + len2 + 1) * sizeof(char));
+	if ((!s1 && !s2) || !(str))
+		return (NULL);
+	str_new = ft_strcpy_double(s1, s2, str);
+	return (str_new);
 }

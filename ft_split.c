@@ -6,7 +6,7 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 12:08:42 by nboer             #+#    #+#             */
-/*   Updated: 2024/05/18 16:04:07 by nboer            ###   ########.fr       */
+/*   Updated: 2024/05/20 19:05:40 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	word_count(char *str, char c)
 			toggle = 1;
 			i++;
 		}
-		if (*str == c )
+		if (*str == c)
 			toggle = 0;
 		str++;
 	}
@@ -45,9 +45,9 @@ int	ft_find_wordend(char const *str, int pos, char c)
 	return (i);
 }
 
-char*	ft_write_word(char const *str, int *pos, char c)
+char	*ft_write_word(char const *str, int *pos, char c)
 {
-	char*	word;
+	char	*word;
 	int		wordend;
 	int		i;
 
@@ -69,7 +69,7 @@ char*	ft_write_word(char const *str, int *pos, char c)
 void	ft_free_mem(char **list)
 {
 	int	i;
-	
+
 	i = 0;
 	while (list[i] != NULL)
 	{
@@ -81,7 +81,7 @@ void	ft_free_mem(char **list)
 
 char	**ft_split(char const *str, char c)
 {
-	char**	list;
+	char	**list;
 	int		i;
 	int		pos;
 	int		wordcount;
@@ -107,4 +107,3 @@ char	**ft_split(char const *str, char c)
 	list[i] = NULL;
 	return (list);
 }
-
