@@ -6,7 +6,7 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:41:49 by nboer             #+#    #+#             */
-/*   Updated: 2024/05/11 17:27:54 by nboer            ###   ########.fr       */
+/*   Updated: 2024/05/20 20:28:57 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,12 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	while (*str != '\0')
+	while (*str != (char)c)
 	{
-		if (*str == (char)c)
-			return ((char *)str);
-		str++;
+		if (!*str++)
+			return (0);
 	}
-	if (c == '\0')
-		return ((char *)str);
-	return (NULL);
+	return ((char *)str);
 }
 /*
 #include <stdio.h>

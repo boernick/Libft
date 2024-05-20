@@ -6,7 +6,7 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 20:45:05 by nboer             #+#    #+#             */
-/*   Updated: 2024/05/20 19:07:49 by nboer            ###   ########.fr       */
+/*   Updated: 2024/05/20 19:53:20 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,7 @@ void			ft_putnbr_fd(int n, int fd);
 char			**ft_split(char const *s, char c);
 void			ft_putnbr_fd(int n, int fd);
 char			*ft_itoa(int n);
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void			ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 #endif
