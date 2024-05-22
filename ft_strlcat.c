@@ -6,13 +6,13 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:33:31 by nboer             #+#    #+#             */
-/*   Updated: 2024/05/12 12:40:01 by nboer            ###   ########.fr       */
+/*   Updated: 2024/05/22 13:10:55 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	get_length_dest(char *dest, size_t size)
+static size_t	get_length_dest(char *dest, size_t size)
 {
 	size_t	i;
 
@@ -25,7 +25,7 @@ size_t	get_length_dest(char *dest, size_t size)
 		return (size);
 }
 
-size_t	get_length_src(const char *src)
+static size_t	get_length_src(const char *src)
 {
 	size_t	i;
 

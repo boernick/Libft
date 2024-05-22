@@ -6,13 +6,13 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 12:08:42 by nboer             #+#    #+#             */
-/*   Updated: 2024/05/20 19:05:40 by nboer            ###   ########.fr       */
+/*   Updated: 2024/05/22 13:33:30 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	word_count(char *str, char c)
+static int	word_count(char *str, char c)
 {
 	int	toggle;
 	int	i;
@@ -35,7 +35,7 @@ int	word_count(char *str, char c)
 	return (i);
 }
 
-int	ft_find_wordend(char const *str, int pos, char c)
+static int	ft_find_wordend(char const *str, int pos, char c)
 {
 	int	i;
 
@@ -45,7 +45,7 @@ int	ft_find_wordend(char const *str, int pos, char c)
 	return (i);
 }
 
-char	*ft_write_word(char const *str, int *pos, char c)
+static char	*ft_write_word(char const *str, int *pos, char c)
 {
 	char	*word;
 	int		wordend;
@@ -66,7 +66,7 @@ char	*ft_write_word(char const *str, int *pos, char c)
 	return (word);
 }
 
-void	ft_free_mem(char **list)
+static void	ft_free_mem(char **list)
 {
 	int	i;
 

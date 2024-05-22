@@ -6,14 +6,14 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 18:04:33 by nboer             #+#    #+#             */
-/*   Updated: 2024/05/12 19:52:27 by nboer            ###   ########.fr       */
+/*   Updated: 2024/05/22 13:11:23 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int	ft_charinstr(char c, const char *set)
+static int	ft_charinstr(char c, const char *set)
 {
 	size_t		i;
 

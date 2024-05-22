@@ -6,15 +6,13 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 15:01:44 by nboer             #+#    #+#             */
-/*   Updated: 2024/05/20 19:07:21 by nboer            ###   ########.fr       */
+/*   Updated: 2024/05/22 13:33:22 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include "libft.h"
-
-size_t	ft_nb_len(int nb)
+static size_t	ft_nb_len(int nb)
 {
 	int	len;
 

@@ -6,13 +6,13 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 15:16:31 by nboer             #+#    #+#             */
-/*   Updated: 2024/05/20 19:02:53 by nboer            ###   ########.fr       */
+/*   Updated: 2024/05/22 13:10:31 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy_double(char const *s1, char const *s2, char *str)
+static char	*ft_strcpy_double(char const *s1, char const *s2, char *str)
 {
 	int		j;
 	int		i;

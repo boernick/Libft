@@ -6,7 +6,7 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 20:45:05 by nboer             #+#    #+#             */
-/*   Updated: 2024/05/20 19:53:20 by nboer            ###   ########.fr       */
+/*   Updated: 2024/05/22 13:15:34 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int				ft_isdigit(int c);
 int				ft_isprint(const int c);
 int				ft_strncmp(const char *str1, const char *str2, size_t n);
 size_t			ft_strlcat(char *dest, const char *src, size_t size);
-unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int n);
+size_t			ft_strlcpy(char *dest, const char *src, size_t n);
 size_t			ft_strlen(const char *str);
 void			ft_bzero(void *str, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
