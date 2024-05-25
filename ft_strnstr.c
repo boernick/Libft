@@ -39,8 +39,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 /*
 int	main(void)
 {
-    char *s1 = "see FF your FF return FF now FF";
-    char *s2 = "FF";
+    char *s1 = "see FF your retur FF return FF now FF";
+    char *s2 = "return";
     size_t len = 32;
 
     char *result = ft_strnstr(s1, s2, len);

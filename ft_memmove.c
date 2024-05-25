@@ -43,7 +43,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 #include <stdio.h>
 int	main(void)
 {
-	char src[] = "Hello World";
+	char src[] = "";
 	char dest[20];
 	ft_memmove(dest, src, 3);
 	printf("%s", dest);
