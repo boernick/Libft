@@ -6,7 +6,7 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:27:47 by nboer             #+#    #+#             */
-/*   Updated: 2024/06/12 17:52:39 by nboer            ###   ########.fr       */
+/*   Updated: 2024/06/12 19:56:46 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	i;
+	int	size;
 
-	i = 0;
+	size = 0;
 	if (!lst)
 		return (0);
 	while (lst != NULL)
 	{
-		i++;
+		size++;
 		lst = lst->next;
 	}
-	return (i);
+	return (size);
 }

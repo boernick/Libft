@@ -6,7 +6,7 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 18:00:45 by nboer             #+#    #+#             */
-/*   Updated: 2024/06/12 18:08:08 by nboer            ###   ########.fr       */
+/*   Updated: 2024/06/12 20:22:16 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ t_list	*ft_lstlast(t_list *lst)
 			return (lst);
 		lst = lst->next;
 	}
-	return (lst);	
+	return (lst);
 }

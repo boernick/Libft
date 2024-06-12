@@ -5,7 +5,14 @@
 
 int main() 
 {
+	t_list *lst = NULL;
+	t_list *new = ft_lstnew("Hello");
+	ft_lstadd_back(&lst, new);
 
+	t_list *lst = ft_lstnew("Hello");
+	t_list *new = ft_lstnew("World");
+	ft_lstadd_back(&lst, new);
+	printf(lst);
 }
 	// char	**s;
 	// char	*d;
